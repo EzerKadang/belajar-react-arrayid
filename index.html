@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script type="text/babel">
+      //   const root = document.querySelector("#root");
+
+      //   const elemet = document.createElement("h1");
+      //   elemet.className = "heading-1";
+      //   elemet.textContent = "Hello From JS";
+
+      //   root.appendChild(elemet);
+
+      //_______________________________________________________
+
+      //   const root = document.querySelector("#root");
+
+      //   const element = React.createElement("h1", {
+      //     children: "hello from react",
+      //     className: "heading-1",
+      //   });
+
+      //   ReactDOM.render(element, root);
+
+      //_______________________________________________________
+
+      //   const root = document.querySelector("#root");
+
+      //   const p1 = React.createElement("p", {
+      //     children: "hello paragraf 1",
+      //   });
+
+      //   const p2 = React.createElement("p", {
+      //     children: "hello paragraf 2",
+      //   });
+
+      //   const element = React.createElement(React.Fragment, {
+      //     children: [p1, p2],
+      //   });
+
+      //   ReactDOM.render(element, root);
+
+      //_______________________________________________________
+
+      //   const root = document.querySelector("#root");
+
+      //   const element = React.createElement(
+      //     "ul",
+      //     null,
+      //     React.createElement("li", null, "orange"),
+      //     React.createElement("li", null, "apple"),
+      //     React.createElement("li", null, "manggo")
+      //   );
+
+      //   ReactDOM.render(element, root);
+
+      //_______________________________________________________
+
+      //   const root = document.querySelector("#root");
+
+      //   const element = (
+      //     <ul>
+      //       <li>orange</li>
+      //       <li>manggo</li>
+      //       <li>apple</li>
+      //     </ul>
+      //   );
+
+      //   ReactDOM.render(element, root);
+
+      //_______________________________________________________
+
+      //   const root = document.querySelector("#root");
+
+      //   function besar(text) {
+      //     return text.toUpperCase();
+      //   }
+
+      //   const name = "eliezer";
+      //   const className = "heading-1";
+      //   const element = <h1 className={className}>nama saya {besar(name)}</h1>;
+      //   const element2 = (
+      //     <img
+      //       src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1064&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      //       alt=""
+      //     />
+      //   );
+
+      //   ReactDOM.render(element2, root);
+
+      //_______________________________________________________
+
+      const root = document.querySelector("#root");
+
+      // function hello(nama) {
+      //   return (
+      //     <p>
+      //       hello <b>{nama}</b>
+      //     </p>
+      //   );
+      // }
+
+      // const element = (
+      //   <>
+      //     {hello("rizal")}
+      //     {hello("rizal")}
+      //     {hello("rizal")}
+      //   </>
+      // );
+
+      //_________________________________________________________
+
+      function tick() {
+        const element = (
+        <div>
+          <h1>jam sekarang</h1>
+          <h2>{new Date().toLocaleTimeString()}</h2>
+          </div>
+      )
+      ReactDOM.render(element, root);
+      }
+      tick();
+
+      setInterval(function(){
+        tick()
+      }, 1000);
+    </script>
+  </body>
+</html>
